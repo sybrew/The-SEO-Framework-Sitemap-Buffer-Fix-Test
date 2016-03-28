@@ -22,7 +22,7 @@ function tsf_test_broken_sitemap() {
 	<?php // Broken sitemap emerges.
 }
 
-add_action( 'template_redirect', 'tsf_sitemap_buffer', 1 );
+add_action( 'template_redirect', 'tsf_sitemap_buffer', 0 );
 /**
  * Flushes the PHP buffer right before when The SEO Framework's sitemap is output.
  * Also removes rogue header information, if any.
