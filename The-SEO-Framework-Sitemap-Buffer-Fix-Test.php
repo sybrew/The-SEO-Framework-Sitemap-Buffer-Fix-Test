@@ -36,8 +36,9 @@ function tsf_sitemap_buffer() {
 		global $wp_query;
 
 		if ( isset( $wp_query->query_vars['the_seo_framework_sitemap'] ) && 'xml' === $wp_query->query_vars['the_seo_framework_sitemap'] ) {
+			wp_ob_end_flush_all();
 			ob_clean();
-			header_remove();
+			header_remove(); // PHP 5.3+
 		}
 
 	}
